@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        .box {
+            width: 390px;
+            height: 680px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 1px 3px 15px 0px #64befff0;
+            border: 0.5px solid black;
+            /* Ensures that the rounded corners of the image are visible */
+        }
+        
+
+        .cardimg {
+            width: calc(100% - 30px);/* This will ensure the image width is 100% minus the combined padding (10px on each side) */
+            
+            height: 50%;/* This will ensure the image height is 100% minus the combined padding (10px on each side) */
+            
+            padding: 10px;/* Adjust padding to create equal space around the image */
+            
+            display: inline-block;/* Required for margin: auto; to work */
+            
+            margin: auto; /* Centers the image horizontally within its parent container */
+           
+            
+            
+        }
+        .cardimg img{
+            border-radius: 10px;/* Applies rounded corners to the image */
+        }
+        .tags{
+            background-color: rgb(255, 255, 255);
+            border: 2px solid rgba(134, 134, 134, 0.824);
+            color: rgba(134, 134, 134, 0.824);
+            box-sizing: border-box;
+            padding: 7px;
+            border-radius: 20px;
+            display: inline-block;
+            display: flex;
+            height: 35px;
+            justify-content: center;
+            width: fit-content+5px;
+            position: absolute;
+            bottom: 300px;
+            margin:5px;
+        }
+        
+        #t2{
+            position: absolute;
+            left:80px;
+        }
+        .heading{
+            /* border: 2px solid black;/ */
+            /* background-color: antiquewhite; */
+            display: flex;
+            justify-content: left;
+            margin: 10px;
+            position:absolute;
+            bottom: 220px;
+            /* left:5px */
+        }
+       
+        .lorem{
+            /* border: 2px solid black; */
+            color: rgb(97, 97, 97);
+            background-color: rgb(255, 255, 255);
+            font-size: large;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            top: 110px;
+            right: 8px;
+            padding: 5px;
+            margin: 20px;
+        }
+        .CTA{
+            /* border: 2px solid black; */
+            color: rgb(0, 42, 254);
+            background-color: rgb(181, 216, 253);
+            width: 40%;
+            font-size: large;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            top: 110px;
+            left: 60px;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+            <img src="vinay.png" alt="cardimage" class="cardimg">
+            <div class="tags" id="t1">Nature</div>
+            <div class="tags" id="t2">Lake</div> 
+            <div class="heading"><h1>Lago di braies</h1></div>
+            <div class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eaque, nihil accusantium mollitia impedit optio illo ratione. Ex, quisquam praesentium.</div>
+            <div class="CTA">Read more</div>
+    </div>
+
+</body>
+
+</html>
