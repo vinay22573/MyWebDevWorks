@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: azure;
+            width: 30vw;
+            height: 80vh;
+        }
+        .box{
+            width: 34px;
+            height: 45px;
+           
+            /* Given below is the  full syntax for making a website using animation*/
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* animation-name: VinayKaAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(1, 0.5, 0.26, 1.01);
+            animation-delay: 3s;
+            animation-direction: alternate;
+            animation-play-state: running; */
+            animation: VinayKaAnimation 3s cubic-bezier(1, 0.5, 0.26, 1.01) 1s 50 forwards;
+
+        }   
+        @keyframes VinayKaAnimation{
+            from{
+                background-color: red;
+            }
+            to{
+                transform: translateX(500px);
+                background-color: yellow;
+            }
+        }
+        body{
+            background-color: rgb(28, 84, 84);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            box
+        </div>
+    </div>
+</body>
+</html>

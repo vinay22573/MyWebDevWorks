@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: center;
+        }
+        iframe {
+            width: 100vw;
+            height: 10vh;
+            border: none; /* Remove iframe border */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .grid1 {
+            width: 60vw;
+            height: 20vh;
+            background-color: beige;
+            border-radius: 10px;
+            margin: 10px 0; /* Add margin for spacing between grid1 and grid2 */
+        }
+        .grid2 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            background-color: rgb(250, 249, 249);
+            justify-items: center;
+            align-items: center;
+            row-gap: 10px;
+            column-gap: 10px;
+            width: 60vw;
+            height: 50vh;
+            border-radius: 10px;
+        }
+        .item {
+            background-color: rgb(230,230,230);
+            border-radius: 10px;
+            display: grid;
+            place-items: center; /* Centers content inside the .item */
+            width: 80%; 
+            height: 80%; 
+        }
+
+        .box4 {
+            display: grid;
+            grid-template-rows: 1fr 0.5fr auto auto auto; /* Define rows for content */
+            justify-items: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            width: 100%; /* Make it span the entire item box */
+            height: 100%; /* Full height of the parent item */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        h3, h5 {
+            margin: 0;
+            padding: 5px;
+        }
+
+        .button {
+            margin-top: 10px; /* Adjust margin */
+            padding: 5px 0; /* Reduce height */
+            background-color: rgb(29, 186, 29);
+            border-radius: 7px;
+            width: 70%; /* Make button wider */
+            text-align: center;
+        }
+
+        .button a {
+            color: white;
+            text-decoration: none;
+            display: block; /* Makes link fill the button area */
+        }
+
+        .extra-text {
+            font-size: 0.7rem; /* Adjust text size */
+            color: #555;
+            text-align: center;
+        }
+
+        /* Media Query for Phones */
+        @media (max-width: 768px) {
+            .grid1, .grid2 {
+                width: 90vw; /* Make the grid wider on smaller screens */
+            }
+            .grid2 {
+                grid-template-columns: 1fr; /* Stack items in a single column */
+                grid-template-rows: auto; /* Adjust row height automatically */
+                height: auto; /* Allow grid height to expand naturally */
+            }
+            .item {
+                width: 100%; /* Take full width of the parent */
+                height: auto; /* Allow height to adjust automatically */
+            }
+            h3, h5 {
+                font-size: 1rem; /* Adjust heading size */
+            }
+            .button {
+                width: 90%; /* Wider button for mobile */
+            }
+            .extra-text {
+                font-size: 0.8rem; /* Slightly increase text size for readability */
+            }
+        }
+
+        /* Media Query for very small screens (less than 480px) */
+        @media (max-width: 480px) {
+            .grid1, .grid2 {
+                width: 95vw; /* Almost full width */
+            }
+            h3 {
+                font-size: 0.9rem; /* Smaller font for small devices */
+            }
+            h5 {
+                font-size: 0.7rem;
+            }
+            .button {
+                padding: 8px 0; /* Slightly larger padding for the button */
+                width: 100%; /* Full width for the button */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <iframe src="navbar.html" title="Navbar"></iframe>
+    </header>
+    <div class="container">
+        <div class="grid1"></div>
+        <div class="grid2">
+            <div class="item">
+                <div class="box4">
+                   <h3><strong>Hindi</strong></h3>
+                   <h5><small>Devanagari</small></h5>
+                   <div class="button">
+                      <a href="#">Download 64bit</a>
+                   </div>
+                   <p class="extra-text">Extra text row 1</p>
+                   <p class="extra-text">Extra text row 2</p>
+                </div>
+             </div>             
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+</html>

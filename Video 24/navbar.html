@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making a Navbar</title>
+    <style>
+        .logo img {
+            width: 8vw;
+            height: auto; /* Keep aspect ratio of the logo */
+        }
+        nav {
+            display: flex;
+            justify-content: center; /* Center the .cont inside nav */
+        }
+        .cont {
+            display: flex;
+            justify-content: space-around; 
+            align-items: center;
+            font-family: "Segoe UI";
+            border-radius: 10px;
+            margin: 2px;
+            background-color: rgba(245, 245, 246, 0.826);
+            width: 70vw; 
+            padding: 3px;
+        }
+        .right ul {
+            display: flex;
+            gap: 3vw; /* Space between list items */
+        }
+        nav ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        nav ul li span {
+            padding: 0px 4px;
+        }
+        li img {
+            width: 1vw;
+            height: 1vw;
+        }
+
+        /* Media Query for Phones */
+        @media (max-width: 768px) {
+            .cont {
+                width: 90vw; /* Make the container wider on smaller screens */
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align items to the start */
+                padding: 10px; /* Add padding for better spacing */
+            }
+            .logo img {
+                width: 6vw; /* Slightly smaller logo */
+            }
+            .right ul {
+                flex-direction: column; /* Stack nav items vertically */
+                gap: 10px; /* Increase gap between items */
+            }
+            nav ul li img {
+                width: 2vw; /* Increase icon size for better touch targets */
+                height: 2vw;
+            }
+        }
+
+        /* Media Query for Very Small Screens (less than 480px) */
+        @media (max-width: 480px) {
+            .logo img {
+                width: 5vw; /* Smaller logo */
+            }
+            .right ul {
+                gap: 15px; /* More space between items */
+            }
+            nav ul li img {
+                width: 2.5vw; /* Larger icon size for touch targets */
+                height: 2.5vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="cont">
+                <div class="logo">
+                    <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="UltraEdit">
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><span>Home</span><img src="da.png" alt=""></li>
+                        <li><span>Pricing</span><img src="da.png" alt=""></li>
+                        <li><span>Resources</span><img src="da.png" alt=""></li>
+                        <li><span>About Us</span><img src="da.png" alt=""></li>
+                        <li><img src="tr.png" alt="tricon"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
